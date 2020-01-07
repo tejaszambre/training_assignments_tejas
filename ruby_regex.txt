@@ -1,0 +1,7 @@
+1. Name condition for 3 word name(first,middle,last):                   a.match(/^[A-Za-z]+\s{1}[A-Za-z]+\s{1}[A-Za-z]+$/)
+2. Mobile condition for 10 digits:                                      a.match(/^[7-9]{1}[0-9]{9}$/)                                        ....As mobile number usally starts with (7,8,9) in India.
+3. email:                                                               a.match(/^[a-zA-Z0-9]+[@]{1}[0-9a-zA-Z]+[.]{1}[0-9a-zA-Z]+$/)        ....As a email dose contain @ and .
+4. IP:                                                                  ^(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])[.]{1}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])[.]{1}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])[.]{1}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])$
+
+
+
