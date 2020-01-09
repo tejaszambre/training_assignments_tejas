@@ -29,7 +29,7 @@ class FoodBookingPortal
 			@cost = @@menu[@dish]
 			bill
 		else
-			change_order_status("Sorry #{name}, #{menu} - Currently not available :(")
+			change_order_status("Sorry #{@user_name}, #{@dish} - Currently not available :(")
 		end
 	end
 
@@ -42,6 +42,7 @@ class FoodBookingPortal
 	end
 
 	def self.menu
+    puts @@menu
 	end
 
 end
@@ -50,6 +51,8 @@ print "Enter User_name: "
 name = gets.chomp
 
 puts
+puts FoodBookingPortal.menu
+puts 
 
 print "Hello #{name}, Enter your Dish name: "
 option = gets.chomp
