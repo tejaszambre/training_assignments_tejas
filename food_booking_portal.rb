@@ -1,14 +1,14 @@
 class FoodBookingPortal
 
-	@@menu = {"icecream" => 50, "bread" =>10}
+	@@menu = {"icecream" => 50, "bread" => 10}
 	@@dish_availability = {"icecream" => true, "bread" => true}
 	@order_status = "Pending"
 
 	attr_accessor :order_status, :user_name, :dish, :quantity, :total_cost, :total_cost
 	
-	def initialize(user_name, dish, quatity)
+	def initialize(user_name, dish_number, quatity)
 		@user_name = user_name
-		@dish = dish
+		@dish = dish(dish_number)
 		@quantity = quatity
 		order?
 	end
@@ -34,7 +34,7 @@ class FoodBookingPortal
 	def change_order_status(status)
 		@order_status = status
 	end
-	
+
 	def bill
 		@total_cost = @quantity * @cost
 	end
@@ -42,7 +42,10 @@ class FoodBookingPortal
 	def self.menu
     puts @@menu
 	end
-
+  
+  def dish number
+    @@menu.keys[number]
+  end
 end
 
 print "Enter User_name: "
@@ -52,8 +55,8 @@ puts
 puts FoodBookingPortal.menu
 puts 
 
-print "Hello #{name}, Enter your Dish name: "
-option = gets.chomp
+print "Hello #{name}, Enter your Dish number: "
+option = gets.to_i
 
 puts 
 
