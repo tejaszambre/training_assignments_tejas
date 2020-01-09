@@ -6,7 +6,6 @@ class FoodBookingPortal
 
 	attr_accessor :order_status, :user_name, :dish, :quantity, :total_cost, :total_cost
 	
-
 	def initialize(user_name, dish, quatity)
 		@user_name = user_name
 		@dish = dish
@@ -20,7 +19,6 @@ class FoodBookingPortal
 		else
 			change_order_status("#{@user_name}, your order is Rejected")
 		end
-
 	end
 
 	def check_availability
